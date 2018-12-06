@@ -1,8 +1,12 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { getFunName } from '../helpers';
 
 class StorePicker extends React.Component {
     myInput = React.createRef();
+    static propTypes = {
+        history: PropTypes.object.isRequired
+    }
 
     gotToStore = event => {
         // 1. Stop from mfrom submitting
